@@ -1,0 +1,316 @@
+// Colors
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$background-color: #f4f4f4;
+$text-color: #333;
+$button-bg: #2980b9;
+$button-hover: #1a5276;
+$border-radius: 8px;
+
+.plan-trip-container {
+  background: $background-color;
+  padding: 20px;
+  min-height: 100vh;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  select,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: $border-radius;
+    border: 1px solid $primary-color;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button {
+    background: $button-bg;
+    color: white;
+    border: none;
+    font-weight: bold;
+
+    &:hover {
+      background: $button-hover;
+    }
+  }
+
+  .trip-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .option {
+      margin: 15px 0;
+      width: 60%;
+
+      h3 {
+        color: $primary-color;
+        margin-bottom: 5px;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $primary-color;
+        border-radius: $border-radius;
+        font-size: 16px;
+        background: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Table Styling
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background: $primary-color;
+      color: white;
+      font-size: 16px;
+    }
+
+    .hotel-image {
+      width: 80px;
+      height: 80px;
+      border-radius: $border-radius;
+      object-fit: cover;
+    }
+
+    button {
+      background: $secondary-color;
+      color: white;
+      padding: 8px;
+      font-size: 14px;
+      border: none;
+
+      &:hover {
+        background: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+  // Transport Section
+  .transport-section {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Guide Section
+  .guide-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: $primary-color;
+      text-align: center;
+    }
+
+    .search-guide {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      input {
+        width: 60%;
+        padding: 10px;
+        border: 1px solid $primary-color;
+        border-radius: $border-radius;
+        font-size: 16px;
+      }
+    }
+
+    .guides {
+      max-height: 300px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    .guide-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 2px solid $primary-color;
+      }
+
+      .details {
+        flex: 1;
+
+        h3 {
+          margin: 0;
+          font-size: 18px;
+          color: $primary-color;
+        }
+
+        p {
+          margin: 5px 0;
+          font-size: 14px;
+          color: $text-color;
+        }
+      }
+
+      button {
+        background: $button-bg;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+
+        &:hover {
+          background: $button-hover;
+        }
+      }
+    }
+  }
+
+  // Summary Section
+  .trip-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h2 {
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-color;
+      margin: 8px 0;
+    }
+  }
+
+  // Proceed Button
+  .proceed-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 18px;
+    background: $button-bg;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background: $button-hover;
+    }
+  }
+
+  // Booking Dialog
+  .booking-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dialog-content {
+      background: white;
+      padding: 20px;
+      border-radius: $border-radius;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+      h2 {
+        color: $primary-color;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+
+      input {
+        width: 100px;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid $primary-color;
+        border-radius: $border-radius;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: $border-radius;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:first-of-type {
+        background: $button-bg;
+        color: white;
+        border: none;
+        font-weight: bold;
+
+        &:hover {
+          background: $button-hover;
+        }
+      }
+
+      button:last-of-type {
+        background: #e74c3c;
+        color: white;
+        border: none;
+
+        &:hover {
+          background: darken(#e74c3c, 10%);
+        }
+      }
+    }
+  }
+}
